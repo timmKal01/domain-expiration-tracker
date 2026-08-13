@@ -1,0 +1,15 @@
+{
+    "name": "domain-expiration-tracker",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Check registration and expiration dates for domains via the official RDAP protocol (IANA bootstrap registry).",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}

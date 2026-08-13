@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of Domain Expiration Tracker",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Domain records",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

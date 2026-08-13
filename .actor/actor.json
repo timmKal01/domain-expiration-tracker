@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "domain-expiration-tracker",
+    "title": "Domain Expiration Tracker — Registrar, Dates & Status",
+    "description": "Check registration and expiration dates, registrar, nameservers, and status for a list of domains via the official RDAP protocol. For IT teams managing a domain portfolio, brand/security teams watching for lapsed-domain takeover risk, and anyone checking domain availability.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}
