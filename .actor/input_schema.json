@@ -8,7 +8,8 @@
             "type": "array",
             "editor": "stringList",
             "description": "Domains to check, without protocol or \"www.\" (e.g. \"example.com\"). One lookup is billed per domain. Not all TLDs support RDAP — mainstream gTLDs (.com, .net, .org, .info, .dev, .app, etc.) are well covered; some ccTLDs (e.g. \"co\", \"us\") are not.",
-            "prefill": ["google.com"]
+            "prefill": ["google.com"],
+            "default": ["google.com"]
         }
     },
     "required": ["domains"]
