@@ -1,0 +1,68 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "domain",
+                    "registered",
+                    "registrar",
+                    "creationDate",
+                    "expirationDate",
+                    "daysUntilExpiration",
+                    "lastChangedDate",
+                    "statuses",
+                    "nameservers",
+                    "rdapUrl"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": {
+                        "label": "Domain",
+                        "format": "text"
+                    },
+                    "registered": {
+                        "label": "Registered",
+                        "format": "boolean"
+                    },
+                    "registrar": {
+                        "label": "Registrar",
+                        "format": "text"
+                    },
+                    "creationDate": {
+                        "label": "Creation date",
+                        "format": "date"
+                    },
+                    "expirationDate": {
+                        "label": "Expiration date",
+                        "format": "date"
+                    },
+                    "daysUntilExpiration": {
+                        "label": "Days until expiration",
+                        "format": "number"
+                    },
+                    "lastChangedDate": {
+                        "label": "Last changed date",
+                        "format": "date"
+                    },
+                    "statuses": {
+                        "label": "Statuses",
+                        "format": "array"
+                    },
+                    "nameservers": {
+                        "label": "Nameservers",
+                        "format": "array"
+                    },
+                    "rdapUrl": {
+                        "label": "RDAP URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
