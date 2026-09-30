@@ -1,3 +1,5 @@
+import { getDomain } from 'tldts';
+
 const UA = 'DomainExpirationTracker/0.1 (+contact: domain-tracker-admin@example.com)';
 const BOOTSTRAP_URL = 'https://data.iana.org/rdap/dns.json';
 
@@ -60,7 +62,10 @@ function findEvent(events, action) {
     return events?.find((e) => e.eventAction === action)?.eventDate ?? null;
 }
 
-export async function lookupDomain(domain) {
+export async function lookupDomain(host) {
+    // RDAP only knows registered domains, so "news.bbc.co.uk" is looked up as "bbc.co.uk".
+    // Without this, any subdomain came back 404 and was reported as not registered.
+    const domain = getDomain(host) ?? host;
     const baseUrl = await rdapBaseUrlFor(domain);
     const res = await fetchWithRetry(`${baseUrl}/domain/${encodeURIComponent(domain)}`, {
         headers: { 'User-Agent': UA, Accept: 'application/rdap+json' },

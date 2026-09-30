@@ -18,14 +18,15 @@ risk, and anyone checking whether a domain is available.
 
 | Field | Type | Description |
 |---|---|---|
-| `domains` | array of strings | Domains to check, without protocol or `"www."`. One lookup is billed per domain. |
+| `domains` | array of strings | Domains to check. Subdomains and URLs work too: `shop.example.co.uk` or `https://www.example.com/about` is checked as the registered domain (`example.co.uk`, `example.com`). One lookup is billed per entry. |
 
 ## Output
 
-One record per domain:
+One record per entry:
 
 ```json
 {
+  "input": "google.com",
   "domain": "google.com",
   "registered": true,
   "registrar": "MarkMonitor Inc.",
@@ -42,6 +43,10 @@ One record per domain:
 An unregistered/available domain returns `"registered": false` with the
 other fields `null` — still billed once, since a completed availability
 check is the result either way.
+
+`input` is the entry as you gave it and `domain` is the registered domain
+that was looked up, so `news.bbc.co.uk` comes back with `"domain": "bbc.co.uk"`.
+The registered domain is worked out from the Public Suffix List.
 
 ## How it works
 

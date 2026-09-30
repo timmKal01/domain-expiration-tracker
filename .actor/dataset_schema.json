@@ -6,6 +6,7 @@
             "title": "Overview",
             "transformation": {
                 "fields": [
+                    "input",
                     "domain",
                     "registered",
                     "registrar",
@@ -21,6 +22,10 @@
             "display": {
                 "component": "table",
                 "properties": {
+                    "input": {
+                        "label": "Input",
+                        "format": "text"
+                    },
                     "domain": {
                         "label": "Domain",
                         "format": "text"
