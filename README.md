@@ -67,4 +67,4 @@ domain whether it's registered or available.
 
 ## Related products
 
-- [Certificate Transparency Monitor](https://github.com/timmKal01/certificate-transparency-monitor) — new TLS certificates issued for a domain, a different signal than registration/expiration
+- [SSL Certificate Monitor](https://apify.com/m_ctim/certificate-transparency-monitor): new TLS certificates issued for a domain, a different signal than registration/expiration
