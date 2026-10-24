@@ -12,5 +12,5 @@
             "default": ["google.com"]
         }
     },
-    "required": ["domains"]
+    "required": []
 }
